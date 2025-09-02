@@ -1,25 +1,31 @@
 {
   "name": "electronics-for-everyone",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Electronics CAD Component Library",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "echo 'No build step required'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "better-sqlite3": "^11.5.0",
     "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "multer": "^2.0.2",
-    "sqlite3": "^5.1.7"
+    "dotenv": "^16.4.5",
+    "pg": "^8.12.0",
+    "cloudinary": "^2.5.1",
+    "multer-storage-cloudinary": "^2.2.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
-  }
+    "nodemon": "^3.1.7"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": ["electronics", "cad", "components", "library"],
+  "author": "Your Name",
+  "license": "MIT"
 }
-

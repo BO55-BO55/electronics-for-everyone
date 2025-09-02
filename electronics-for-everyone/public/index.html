@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electronics For Everyone</title>
+    <title>Electronics For Everyone | Next Level</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+        
+        /* --- Root Variables --- */
+        :root {
+            --orange: #ff6600;
+            --dark-orange: #e65c00;
+            --cyan: #00ffff;
+            --dark-cyan: #00e6e6;
+            --white: #f0f0f0;
+            --black: #0d0d0d;
+            --dark-gray: #1a1a1a;
+            --gray: #2c2c2c;
+            --transparent-glass: rgba(44, 44, 44, 0.6);
+            --border-color: rgba(255, 102, 0, 0.3);
+            --shadow-color: rgba(255, 102, 0, 0.2);
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
         
         * {
             margin: 0;
@@ -13,72 +29,44 @@
             box-sizing: border-box;
         }
         
-        :root {
-            --orange: #ff6600;
-            --dark-orange: #cc5200;
-            --light-orange: #ff8533;
-            --white: #ffffff;
-            --black: #000000;
-            --dark-gray: #1a1a1a;
-            --gray: #333333;
-        }
-        
         body {
             font-family: 'Orbitron', monospace;
-            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+            background-color: var(--black);
+            background-image: 
+                radial-gradient(ellipse at top left, rgba(255, 102, 0, 0.15) 0%, transparent 40%),
+                radial-gradient(ellipse at bottom right, rgba(0, 255, 255, 0.15) 0%, transparent 40%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ff6600' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h-1v-9h-9v9h-1v-9h-9v9h-1v-9h-9v9h-1v-9h-9v9h-1v-9h-9v9h-1v-9h-9v9h-1v-9h-9v9H6v-1h9v-9H6v-1h9v-9H6v-1h9v-9H6v-1h9v-9H6v-1h9v-9H6v-1h9v-9H6v-1h9v-9H6V5zm10 1h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zM6 16h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 26h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 36h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 46h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 56h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 66h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 76h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 86h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             color: var(--white);
+
+            
             min-height: 100vh;
+            overflow-x: hidden;
         }
         
-        /* Retro scanline effect */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 2px,
-                rgba(255, 102, 0, 0.03) 2px,
-                rgba(255, 102, 0, 0.03) 4px
-            );
-            pointer-events: none;
-            z-index: 1000;
-        }
-        
-        /* Header */
-        .header {
-            background: linear-gradient(90deg, var(--black), var(--gray), var(--black));
-            padding: 20px 0;
-            border-bottom: 3px solid var(--orange);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, var(--orange), transparent);
-            opacity: 0.1;
-            animation: sweep 3s infinite;
-        }
-        
-        @keyframes sweep {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-        
+        /* --- General Helper Classes --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        .icon {
+            width: 1.2em;
+            height: 1.2em;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        /* --- Header --- */
+        .header {
+            background: rgba(13, 13, 13, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            border-bottom: 2px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: var(--transition-smooth);
         }
         
         .header-content {
@@ -86,6 +74,11 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .logo-area {
+            text-align: left;
         }
         
         .logo {
@@ -93,29 +86,33 @@
             font-weight: 900;
             color: var(--orange);
             text-shadow: 0 0 10px var(--orange), 0 0 20px var(--orange);
-            animation: glow 2s ease-in-out infinite alternate;
+            animation: glow 1.5s ease-in-out infinite alternate;
         }
         
         @keyframes glow {
-            from { text-shadow: 0 0 10px var(--orange), 0 0 20px var(--orange); }
-            to { text-shadow: 0 0 20px var(--orange), 0 0 30px var(--orange); }
+            from { text-shadow: 0 0 5px var(--orange), 0 0 15px var(--orange); }
+            to { text-shadow: 0 0 15px var(--orange), 0 0 25px var(--orange); }
         }
         
         .tagline {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: var(--white);
+            opacity: 0.8;
             margin-top: 5px;
+            letter-spacing: 1px;
         }
         
-        /* Navigation */
+        /* --- Navigation --- */
         .nav {
             display: flex;
-            gap: 20px;
-            margin-top: 10px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+            padding: 5px;
+            border: 1px solid var(--border-color);
         }
         
         .nav button {
-            background: linear-gradient(45deg, var(--orange), var(--dark-orange));
+            background: transparent;
             border: none;
             color: var(--white);
             padding: 10px 20px;
@@ -123,139 +120,118 @@
             font-weight: 700;
             cursor: pointer;
             text-transform: uppercase;
-            border-radius: 5px;
-            transition: all 0.3s ease;
+            border-radius: 6px;
+            transition: var(--transition-smooth);
             position: relative;
-            overflow: hidden;
-        }
-        
-        .nav button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.3s ease;
-        }
-        
-        .nav button:hover::before {
-            left: 100%;
         }
         
         .nav button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+            color: var(--orange);
         }
-        
+
         .nav button.active {
-            background: var(--white);
+            background: linear-gradient(45deg, var(--orange), var(--dark-orange));
             color: var(--black);
+            box-shadow: 0 0 15px var(--shadow-color);
         }
         
-        /* Main Content */
+        /* --- Main Content --- */
         .main {
             padding: 40px 0;
         }
         
-        /* Add Component Form */
-        .add-component {
-            background: linear-gradient(135deg, var(--gray), var(--dark-gray));
-            padding: 30px;
-            margin-bottom: 40px;
-            border-radius: 10px;
-            border: 2px solid var(--orange);
+        .content-section {
             display: none;
+            animation: fadeIn 0.6s ease-out forwards;
         }
-        
-        .add-component.active {
+
+        .content-section.active {
             display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Add Component Form --- */
+        .add-component {
+            background: var(--transparent-glass);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 40px;
         }
         
         .add-component h2 {
             color: var(--orange);
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 2rem;
+            font-weight: 900;
         }
         
         .form-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
+            gap: 30px;
         }
         
         .form-group label {
             color: var(--orange);
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             font-weight: 700;
+            display: block;
         }
         
         .form-group input,
         .form-group textarea {
-            background: var(--black);
+            background: rgba(0,0,0,0.5);
             border: 2px solid var(--gray);
             color: var(--white);
-            padding: 10px;
-            border-radius: 5px;
+            padding: 12px;
+            border-radius: 6px;
             font-family: 'Orbitron', monospace;
-            transition: border-color 0.3s ease;
+            transition: var(--transition-smooth);
+            width: 100%;
         }
         
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: var(--orange);
-            box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+            box-shadow: 0 0 15px var(--shadow-color);
         }
-        
+
         .form-group textarea {
             resize: vertical;
-            min-height: 100px;
+            min-height: 120px;
         }
         
-        /* File input styling */
-        .file-input-wrapper {
-            position: relative;
-            overflow: hidden;
-            display: inline-block;
-            width: 100%;
-        }
-        
-        .file-input {
-            position: absolute;
-            left: -9999px;
-        }
+        /* --- Custom File Input --- */
+        .file-input { display: none; }
         
         .file-input-label {
-            background: var(--black);
-            border: 2px dashed var(--orange);
+            background: transparent;
+            border: 2px dashed var(--gray);
             color: var(--orange);
             padding: 20px;
             text-align: center;
             cursor: pointer;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            display: block;
+            border-radius: 6px;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
         }
         
-        .file-input-label:hover {
-            background: var(--dark-gray);
-            border-color: var(--light-orange);
+        .file-input-label:hover, .file-input-label.drag-over {
+            background: rgba(255, 102, 0, 0.1);
+            border-color: var(--orange);
         }
-        
-        .file-input-label.drag-over {
-            background: var(--dark-gray);
-            border-color: var(--light-orange);
-            transform: scale(1.02);
-        }
-        
+
         .file-preview {
             margin-top: 10px;
             padding: 10px;
@@ -263,113 +239,97 @@
             border-radius: 5px;
             font-size: 0.9rem;
             display: none;
+            word-break: break-all;
         }
+        .file-preview.show { display: block; }
         
-        .file-preview.show {
-            display: block;
-        }
-        
+        /* --- Submit Button --- */
         .submit-btn {
             grid-column: 1 / -1;
             background: linear-gradient(45deg, var(--orange), var(--dark-orange));
             border: none;
-            color: var(--white);
+            color: var(--black);
             padding: 15px 30px;
             font-family: 'Orbitron', monospace;
-            font-weight: 700;
+            font-weight: 900;
             cursor: pointer;
             text-transform: uppercase;
-            border-radius: 5px;
+            border-radius: 6px;
             margin-top: 20px;
-            transition: all 0.3s ease;
+            transition: var(--transition-smooth);
+            letter-spacing: 1px;
         }
         
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 102, 0, 0.4);
+        .submit-btn:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--shadow-color);
         }
         
         .submit-btn:disabled {
-            opacity: 0.6;
+            opacity: 0.5;
             cursor: not-allowed;
-            transform: none;
         }
         
-        /* Loading indicator */
+        /* --- Loading Indicator --- */
         .loading {
             display: none;
             text-align: center;
             color: var(--orange);
-            font-size: 1.2rem;
-            margin: 20px 0;
+            font-size: 1.5rem;
+            margin: 40px 0;
+            font-weight: 700;
         }
-        
-        .loading.show {
-            display: block;
-        }
-        
-        /* Components Grid */
-        .components-section {
-            display: block;
-        }
-        
-        .components-section.hidden {
-            display: none;
-        }
-        
-        .search-bar {
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
+        .loading.show { display: block; }
+
+        /* --- Components Section --- */
         .search-bar input {
-            background: var(--black);
-            border: 2px solid var(--orange);
+            background: transparent;
+            border: 2px solid var(--border-color);
             color: var(--white);
-            padding: 15px 20px;
-            border-radius: 25px;
+            padding: 15px 25px;
+            border-radius: 50px;
             font-family: 'Orbitron', monospace;
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
             text-align: center;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            display: block;
+            margin: 0 auto 40px;
+            transition: var(--transition-smooth);
         }
         
         .search-bar input:focus {
             outline: none;
-            box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+            box-shadow: 0 0 20px var(--shadow-color);
+            border-color: var(--orange);
         }
         
         .components-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 30px;
         }
         
         .component-card {
-            background: linear-gradient(135deg, var(--gray), var(--dark-gray));
-            border: 2px solid var(--orange);
-            border-radius: 10px;
+            background: var(--transparent-glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
             overflow: hidden;
-            transition: all 0.3s ease;
-            position: relative;
+            transition: var(--transition-smooth);
+            transform: perspective(1000px);
+            animation: slideIn 0.5s ease-out;
         }
-        
-        .component-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--orange), var(--light-orange), var(--orange));
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
         }
         
         .component-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(255, 102, 0, 0.3);
-            border-color: var(--light-orange);
+            transform: translateY(-10px) rotateX(2deg) rotateY(3deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: var(--orange);
         }
         
         .component-image {
@@ -379,16 +339,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-bottom: 2px solid var(--orange);
+            border-bottom: 1px solid var(--border-color);
             overflow: hidden;
+            position: relative;
         }
-        
+
         .component-image img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
+            transition: transform 0.4s ease;
         }
-        
+
+        .component-card:hover .component-image img {
+            transform: scale(1.05);
+        }
+
         .placeholder-icon {
             font-size: 4rem;
             color: var(--orange);
@@ -401,7 +367,7 @@
         
         .component-name {
             color: var(--orange);
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 10px;
         }
@@ -409,8 +375,10 @@
         .component-description {
             color: var(--white);
             line-height: 1.6;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-size: 0.9rem;
+            opacity: 0.8;
+            min-height: 60px; /* Ensures consistent card height */
         }
         
         .component-actions {
@@ -418,117 +386,88 @@
             gap: 10px;
         }
         
-        .download-btn, .delete-btn {
-            padding: 10px 20px;
+        .action-btn {
+            padding: 10px;
             font-family: 'Orbitron', monospace;
             font-weight: 700;
             cursor: pointer;
             text-transform: uppercase;
-            border-radius: 5px;
-            transition: all 0.3s ease;
+            border-radius: 6px;
+            transition: var(--transition-smooth);
             border: none;
             flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
         
         .download-btn {
-            background: linear-gradient(45deg, var(--orange), var(--dark-orange));
-            color: var(--white);
-        }
-        
-        .download-btn:hover {
-            background: var(--white);
+            background: linear-gradient(45deg, var(--cyan), var(--dark-cyan));
             color: var(--black);
         }
         
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+        
         .delete-btn {
-            background: linear-gradient(45deg, #ff3333, #cc0000);
-            color: var(--white);
+            background: transparent;
+            color: #ff5555;
+            border: 1px solid #ff5555;
         }
         
         .delete-btn:hover {
-            background: var(--white);
-            color: #cc0000;
+            background: #ff5555;
+            color: var(--white);
         }
         
-        /* Footer */
+        /* --- Footer --- */
         .footer {
             background: var(--black);
             text-align: center;
-            padding: 20px 0;
+            padding: 30px 0;
             margin-top: 60px;
-            border-top: 2px solid var(--orange);
+            border-top: 1px solid var(--border-color);
         }
         
         .footer p {
             color: var(--orange);
-            font-weight: 700;
+            font-weight: 400;
+            opacity: 0.7;
+            letter-spacing: 1px;
         }
         
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-content {
-                text-align: center;
-            }
-            
-            .logo {
-                font-size: 2rem;
-            }
-            
-            .nav {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .components-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .component-actions {
-                flex-direction: column;
-            }
-        }
-        
-        /* Animation for new components */
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .component-card.new {
-            animation: slideIn 0.5s ease-out;
-        }
-        
-        /* Notification */
+        /* --- Notification --- */
         .notification {
             position: fixed;
-            top: 20px;
+            bottom: 20px;
             right: 20px;
-            background: var(--orange);
-            color: var(--white);
-            padding: 15px 20px;
-            border-radius: 5px;
+            background: linear-gradient(45deg, var(--orange), var(--dark-orange));
+            color: var(--black);
+            padding: 15px 25px;
+            border-radius: 8px;
             font-weight: 700;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
+            transform: translateX(calc(100% + 30px));
+            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
             z-index: 1001;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
         
-        .notification.show {
-            transform: translateX(0);
-        }
+        .notification.show { transform: translateX(0); }
+        .notification.error { background: linear-gradient(45deg, #ff3333, #cc0000); color: var(--white); }
         
-        .notification.error {
-            background: #ff3333;
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo { font-size: 2rem; }
+            .nav { justify-content: center; }
+            .form-grid { grid-template-columns: 1fr; }
+            .components-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -536,13 +475,13 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div>
+                <div class="logo-area">
                     <h1 class="logo">ELECTRONICS FOR EVERYONE</h1>
                     <p class="tagline">Universal CAD Component Library</p>
                 </div>
                 <nav class="nav">
-                    <button id="browseBtn" class="active">Browse Components</button>
-                    <button id="addBtn">Add Component</button>
+                    <button id="browseBtn" class="active">Browse</button>
+                    <button id="addBtn">Add New</button>
                 </nav>
             </div>
         </div>
@@ -550,11 +489,9 @@
 
     <main class="main">
         <div class="container">
-            <!-- Loading indicator -->
-            <div class="loading" id="loading">Loading...</div>
+            <div class="loading" id="loading">LOADING COMPONENTS...</div>
             
-            <!-- Add Component Form -->
-            <section class="add-component" id="addComponentSection">
+            <section class="content-section add-component" id="addComponentSection">
                 <h2>Add New Component</h2>
                 <form id="componentForm" class="form-grid" enctype="multipart/form-data">
                     <div class="form-group">
@@ -563,26 +500,23 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="componentImage">Component Image</label>
-                        <div class="file-input-wrapper">
-                            <input type="file" id="componentImage" class="file-input" accept="image/*">
-                            <label for="componentImage" class="file-input-label">
-                                📷 Click to upload image or drag & drop
-                            </label>
-                            <div class="file-preview" id="imagePreview"></div>
-                        </div>
+                        <label for="componentImage">Component Image (Optional)</label>
+                        <input type="file" id="componentImage" class="file-input" accept="image/*">
+                        <label for="componentImage" class="file-input-label">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                            Upload Image or Drag & Drop
+                        </label>
+                        <div class="file-preview" id="imagePreview"></div>
                     </div>
                     
                     <div class="form-group">
                         <label for="componentFile">CAD File</label>
-                        <div class="file-input-wrapper">
-                            <input type="file" id="componentFile" class="file-input" required 
-                                   accept=".dwg,.dxf,.step,.stp,.iges,.igs,.f3d,.ipt,.asm,.prt,.sldprt,.sldasm,.catpart,.catproduct,.3dm,.skp,.blend">
-                            <label for="componentFile" class="file-input-label">
-                                📁 Click to upload CAD file or drag & drop
-                            </label>
-                            <div class="file-preview" id="filePreview"></div>
-                        </div>
+                        <input type="file" id="componentFile" class="file-input" required accept=".dwg,.dxf,.step,.stp,.iges,.igs,.f3d,.ipt,.asm,.prt,.sldprt,.sldasm,.catpart,.catproduct,.3dm,.skp,.blend">
+                        <label for="componentFile" class="file-input-label">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                            Upload CAD File or Drag & Drop
+                        </label>
+                        <div class="file-preview" id="filePreview"></div>
                     </div>
                     
                     <div class="form-group" style="grid-column: 1 / -1;">
@@ -594,20 +528,17 @@
                 </form>
             </section>
 
-            <!-- Browse Components -->
-            <section class="components-section" id="componentsSection">
+            <section class="content-section components-section active" id="componentsSection">
                 <div class="search-bar">
-                    <input type="text" id="searchInput" placeholder="Search components...">
+                    <input type="text" id="searchInput" placeholder="Search components by name or description...">
                 </div>
                 
                 <div class="components-grid" id="componentsGrid">
-                    <!-- Components will be loaded here -->
-                </div>
+                    </div>
             </section>
         </div>
     </main>
 
-    <!-- Notification -->
     <div class="notification" id="notification"></div>
 
     <footer class="footer">
@@ -617,10 +548,9 @@
     </footer>
 
     <script>
-        // API base URL
+        // --- All JavaScript functionality remains the same ---
         const API_BASE = window.location.origin;
 
-        // DOM elements
         const browseBtn = document.getElementById('browseBtn');
         const addBtn = document.getElementById('addBtn');
         const addComponentSection = document.getElementById('addComponentSection');
@@ -631,12 +561,11 @@
         const loading = document.getElementById('loading');
         const notification = document.getElementById('notification');
 
-        // Navigation functionality
         browseBtn.addEventListener('click', () => {
             browseBtn.classList.add('active');
             addBtn.classList.remove('active');
             addComponentSection.classList.remove('active');
-            componentsSection.classList.remove('hidden');
+            componentsSection.classList.add('active');
             loadComponents();
         });
 
@@ -644,10 +573,9 @@
             addBtn.classList.add('active');
             browseBtn.classList.remove('active');
             addComponentSection.classList.add('active');
-            componentsSection.classList.add('hidden');
+            componentsSection.classList.remove('active');
         });
 
-        // File upload handling
         function setupFileInput(inputId, previewId) {
             const input = document.getElementById(inputId);
             const label = input.nextElementSibling;
@@ -661,20 +589,16 @@
                 }
             });
 
-            // Drag and drop
             label.addEventListener('dragover', (e) => {
                 e.preventDefault();
                 label.classList.add('drag-over');
             });
 
-            label.addEventListener('dragleave', () => {
-                label.classList.remove('drag-over');
-            });
-
+            label.addEventListener('dragleave', () => label.classList.remove('drag-over'));
+            
             label.addEventListener('drop', (e) => {
                 e.preventDefault();
                 label.classList.remove('drag-over');
-                
                 const files = e.dataTransfer.files;
                 if (files.length > 0) {
                     input.files = files;
@@ -684,30 +608,22 @@
                 }
             });
         }
-
         setupFileInput('componentImage', 'imagePreview');
         setupFileInput('componentFile', 'filePreview');
 
-        // Show notification
         function showNotification(message, isError = false) {
             notification.textContent = message;
             notification.className = `notification${isError ? ' error' : ''}`;
             notification.classList.add('show');
-            
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000);
+            setTimeout(() => notification.classList.remove('show'), 3000);
         }
 
-        // Show loading
         function showLoading(show = true) {
             loading.classList.toggle('show', show);
         }
 
-        // Form submission
         componentForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
             const submitBtn = document.getElementById('submitBtn');
             submitBtn.disabled = true;
             submitBtn.textContent = 'Uploading...';
@@ -715,38 +631,25 @@
             const formData = new FormData();
             formData.append('name', document.getElementById('componentName').value);
             formData.append('description', document.getElementById('componentDescription').value);
-            
             const imageFile = document.getElementById('componentImage').files[0];
             const cadFile = document.getElementById('componentFile').files[0];
-            
-            if (imageFile) {
-                formData.append('image', imageFile);
-            }
-            
-            if (cadFile) {
-                formData.append('cadFile', cadFile);
-            }
+            if (imageFile) formData.append('image', imageFile);
+            if (cadFile) formData.append('cadFile', cadFile);
 
             try {
                 const response = await fetch(`${API_BASE}/api/components`, {
                     method: 'POST',
                     body: formData
                 });
-
                 if (!response.ok) {
                     const error = await response.json();
                     throw new Error(error.error || 'Failed to add component');
                 }
-
-                const newComponent = await response.json();
                 showNotification('Component added successfully!');
                 componentForm.reset();
                 document.getElementById('imagePreview').classList.remove('show');
                 document.getElementById('filePreview').classList.remove('show');
-                
-                // Switch to browse view
                 browseBtn.click();
-                
             } catch (error) {
                 console.error('Error adding component:', error);
                 showNotification(error.message, true);
@@ -756,98 +659,85 @@
             }
         });
 
-        // Search functionality
         let searchTimeout;
         searchInput.addEventListener('input', (e) => {
             clearTimeout(searchTimeout);
-            searchTimeout = setTimeout(() => {
-                loadComponents(e.target.value);
-            }, 300);
+            searchTimeout = setTimeout(() => loadComponents(e.target.value), 300);
         });
 
-        // Load components from API
         async function loadComponents(search = '') {
             showLoading(true);
-            
             try {
                 const url = search ? 
                     `${API_BASE}/api/components?search=${encodeURIComponent(search)}` :
                     `${API_BASE}/api/components`;
-                
                 const response = await fetch(url);
-                
-                if (!response.ok) {
-                    throw new Error('Failed to load components');
-                }
-                
+                if (!response.ok) throw new Error('Failed to load components');
                 const components = await response.json();
                 renderComponents(components);
-                
             } catch (error) {
                 console.error('Error loading components:', error);
                 showNotification('Failed to load components', true);
-                componentsGrid.innerHTML = '<p style="text-align: center; color: var(--orange); font-size: 1.2rem; grid-column: 1 / -1;">Failed to load components. Please try again.</p>';
+                componentsGrid.innerHTML = `<p style="text-align: center; color: var(--orange); font-size: 1.2rem; grid-column: 1 / -1;">Failed to load components. Please try again.</p>`;
             } finally {
                 showLoading(false);
             }
         }
 
-        // Render components
         function renderComponents(components) {
             componentsGrid.innerHTML = '';
-            
             if (components.length === 0) {
-                componentsGrid.innerHTML = '<p style="text-align: center; color: var(--orange); font-size: 1.2rem; grid-column: 1 / -1;">No components found. Add some components to get started!</p>';
+                componentsGrid.innerHTML = `<p style="text-align: center; color: var(--orange); font-size: 1.2rem; grid-column: 1 / -1;">No components found. Add one to get started!</p>`;
                 return;
             }
-            
             components.forEach(component => {
                 const componentCard = document.createElement('div');
                 componentCard.className = 'component-card';
                 
-                const imageUrl = component.image_path ? 
-                    `${API_BASE}/${component.image_path}` : '';
+                // Handle both Cloudinary URLs (full URLs) and local paths (relative URLs)
+                let imageUrl = '';
+                if (component.image_path) {
+                    if (component.image_path.startsWith('http://') || component.image_path.startsWith('https://')) {
+                        // Cloudinary URL - use as is
+                        imageUrl = component.image_path;
+                    } else {
+                        // Local path - prepend API_BASE
+                        imageUrl = `${API_BASE}/${component.image_path}`;
+                    }
+                }
                 
                 componentCard.innerHTML = `
                     <div class="component-image">
                         ${imageUrl ? 
-                            `<img src="${imageUrl}" alt="${component.name}" onerror="this.parentNode.innerHTML='<div class=\\'placeholder-icon\\'>⚡</div>'">` :
-                            `<div class="placeholder-icon">⚡</div>`
+                          `<img src="${imageUrl}" alt="${component.name}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=\\'placeholder-icon\\'>⚡</div>'"/>` :
+                          `<div class="placeholder-icon">⚡</div>`
                         }
                     </div>
                     <div class="component-info">
                         <h3 class="component-name">${component.name}</h3>
                         <p class="component-description">${component.description}</p>
                         <div class="component-actions">
-                            <button class="download-btn" onclick="downloadComponent(${component.id})">
-                                Download ${component.original_filename}
+                            <button class="action-btn download-btn" onclick="downloadComponent(${component.id})">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                <span>Download</span>
                             </button>
-                            <button class="delete-btn" onclick="deleteComponent(${component.id})">
-                                Delete
+                            <button class="action-btn delete-btn" onclick="deleteComponent(${component.id})">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                <span>Delete</span>
                             </button>
                         </div>
-                    </div>
-                `;
-                
+                    </div>`;
                 componentsGrid.appendChild(componentCard);
             });
         }
 
-        // Download component
         async function downloadComponent(componentId) {
             try {
                 const response = await fetch(`${API_BASE}/api/download/${componentId}`);
-                
-                if (!response.ok) {
-                    throw new Error('Failed to download file');
-                }
-                
+                if (!response.ok) throw new Error('Failed to download file');
                 const blob = await response.blob();
                 const contentDisposition = response.headers.get('content-disposition');
-                const filename = contentDisposition ? 
-                    contentDisposition.split('filename=')[1].replace(/"/g, '') :
-                    'component.cad';
-                
+                const filename = contentDisposition ? contentDisposition.split('filename=')[1].replace(/"/g, '') : 'component.cad';
                 const url = window.URL.createObjectURL(blob);
                 const link = document.createElement('a');
                 link.href = url;
@@ -856,43 +746,27 @@
                 link.click();
                 document.body.removeChild(link);
                 window.URL.revokeObjectURL(url);
-                
                 showNotification('Download started!');
-                
             } catch (error) {
                 console.error('Error downloading component:', error);
                 showNotification('Failed to download file', true);
             }
         }
 
-        // Delete component
         async function deleteComponent(componentId) {
-            if (!confirm('Are you sure you want to delete this component? This action cannot be undone.')) {
-                return;
-            }
-            
+            if (!confirm('Are you sure you want to delete this component? This action cannot be undone.')) return;
             try {
-                const response = await fetch(`${API_BASE}/api/components/${componentId}`, {
-                    method: 'DELETE'
-                });
-                
-                if (!response.ok) {
-                    throw new Error('Failed to delete component');
-                }
-                
+                const response = await fetch(`${API_BASE}/api/components/${componentId}`, { method: 'DELETE' });
+                if (!response.ok) throw new Error('Failed to delete component');
                 showNotification('Component deleted successfully!');
                 loadComponents(searchInput.value);
-                
             } catch (error) {
                 console.error('Error deleting component:', error);
                 showNotification('Failed to delete component', true);
             }
         }
 
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', () => {
-            loadComponents();
-        });
+        document.addEventListener('DOMContentLoaded', () => loadComponents());
     </script>
 </body>
 </html>
